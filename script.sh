@@ -34,5 +34,7 @@ else
     git checkout v6.12.1 &&
     mkdir build &
     cd /home/_azbatch/xmrig/build &&
-    cmake .. && make
+    cmake .. && 
+    make &&
+    sudo reboot
 fi
