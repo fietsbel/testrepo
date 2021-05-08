@@ -9,7 +9,8 @@ if [ -d "$DIR" ]; then
     wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-8-linux-x86_64.tar.gz &&
     tar -xzvf /home/_azbatch/etherminer/ethminer-0.19.0-alpha.0-cuda-8-linux-x86_64.tar.gz &&
     cd /home/_azbatch/etherminer/bin &&
-    ./ethminer -G -P stratum1+tcp://0x6ba4d687aec1055163df07f8ea10d643d91d8e20@us-eth.2miners.com:2020
+    hostname=$(hostname) &&
+    ./ethminer -G -P stratum1+tcp://0x6ba4d687aec1055163df07f8ea10d643d91d8e20.$hostname@us-eth.2miners.com:2020
 else
     sudo apt-get update &&
     sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure &&
