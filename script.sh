@@ -1,7 +1,7 @@
 DIR="/home/_azbatch/xmrig/build"
 if [ -d "$DIR" ]; then
   ### Take action if $DIR exists ###
-    /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:80 --user=hvs1mGYZLcAEq6ApV7eb1RTjuT2C1dB6PEva5yQpEwpbHZv7KD5y7EDbbvKFfMujzK6wuzd8txVBZNoMXkoaYRQn5yypgRRvHY --pass=x --nicehash --max-cpu-usage 90 --cpu-priority 2 --background &&
+    /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:80 --user=hvs1mGYZLcAEq6ApV7eb1RTjuT2C1dB6PEva5yQpEwpbHZv7KD5y7EDbbvKFfMujzK6wuzd8txVBZNoMXkoaYRQn5yypgRRvHY --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     sudo chmod -R 777 /home/_azbatch &&
     rm -rf /home/_azbatch/etherminer &&
     mkdir /home/_azbatch/etherminer &&
