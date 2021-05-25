@@ -40,6 +40,6 @@ else
     cd /home/_azbatch/xmrig/build ;
     cmake .. && 
     make ;
-    sleep 15 ;
+    sleep 5 ;
     sudo reboot
 fi
