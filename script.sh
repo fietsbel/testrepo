@@ -10,13 +10,13 @@ if [ -f "$DIR" ]; then
     tar -xzvf /home/_azbatch/trex/t-rex-0.20.4-linux.tar.gz &&
     cd /home/_azbatch/trex &&
     hostname=$(hostname | cut -c1-8) &&
-    /home/_azbatch/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
+    /home/_azbatch/trex/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
     sleep 30 &&
-    /home/_azbatch/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
+    /home/_azbatch/trex/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
     sleep 60 &&
-    /home/_azbatch/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
+    /home/_azbatch/trex/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0 &&
     sleep 240 &&
-    /home/_azbatch/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0
+    /home/_azbatch/trex/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p x --api-bind-http 0 --api-bind-telnet 0
 else
     sudo apt-get update ;
     sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure ;
