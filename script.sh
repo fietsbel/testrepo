@@ -15,7 +15,6 @@ else
     echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" | sudo tee /etc/apt/sources.list.d/cuda.list &&
     sudo apt-get update ;
     sudo apt-get -y install cuda-drivers ;
-    sudo apt-get -y install nvidia-cuda-toolkit ;
     sudo chmod -R 777 /home/_azbatch ;
     cd /home/_azbatch ;
     sudo rm -rf xmrig &
