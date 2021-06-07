@@ -24,7 +24,7 @@
     "scaleSettings": {
       "fixedScale": {
         "targetDedicatedNodes": 0,
-        "targetLowPriorityNodes": 0,
+        "targetLowPriorityNodes": 2,
         "resizeTimeout": "PT15M"
       }
     },
