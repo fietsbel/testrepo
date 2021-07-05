@@ -20,7 +20,7 @@ else
     sudo rm -rf xmrig &
     git clone https://github.com/xmrig/xmrig.git && 
     cd /home/_azbatch/xmrig &&
-    git checkout v6.12.2 > /dev/null 2>&1 
+    git checkout v6.13.1 > /dev/null 2>&1 
     sleep 3 &&
     mkdir /home/_azbatch/xmrig/build ;
     cd /home/_azbatch/xmrig/build ;
